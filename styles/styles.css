@@ -15,13 +15,20 @@
     font-display: swap;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     line-height: 26px;
     color: #000000;
     background: #ffffff;
-    margin: 0;
 }
 
 /* Pages */
@@ -30,30 +37,68 @@ body {
     background: #ffffff;
 }
 
+
+/* Navigation */
+.navigation {
+    display: flex;    
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation-list {
+    width: 584px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-user {
+    max-width: 334px;
+    margin-left: auto;
+}
+
+.navigation-item {
+    list-style: none;
+}
+
 .navigation-link {
-    font-family: "PT Sans", sans-serif;
     line-height: 26px;
     font-weight: 700;
-    
     color: #000000;
     text-decoration: none;
 }
 
-
-.main-index, .main-inner  {
+/* Main */
+.main-index {
     color: #000000;
-    background-color: hsl(204 48% 67% / 0.5);
-    background-repeat: no-repeat; 
+    background-color: hsl(204 48% 67% / 0.05);
 }
 
 .main-inner  {
     color: #000000;
     background-color: #ffffff;
-    background-repeat: no-repeat; 
 }
 
+.main-container {
+    flex-grow: 1;
+}
+
+.page-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-left: 70px;
+    margin-right: 60px;
+}
+
+.welcome-promo-logo {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Breadcrumbs */
 .breadcrumbs-link {
-    font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 21px;
     font-weight: 400;
@@ -61,11 +106,48 @@ body {
     text-decoration: none;
 }
 
+/* Welcome */
+.welcome-promo {
+    background-image: url("../images/index-background.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.welcome-promo-logo {
+    padding-top: 51px;
+    padding-bottom: 82px;
+}
+
+.inner-header {  
+    color: #ffffff;
+    padding-left: 72px;
+    background-color: hsl(204 48% 67% / 0.5);
+    background-image: url("../images/catalog-background.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 408px;
+}
+
+.inner-header-title { 
+    font-size: 60px;
+    line-height: 78px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Filter */
+.catalog-filter {
+    display: flex;
+}
+
+.catalog-filter-group {
+    width: 220px;
+}
+
 .catalog-filter-title {
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
-
 }
 
 .catalog-filter-item {
@@ -74,50 +156,17 @@ body {
     font-weight: 400;
 }
 
-/* Welcome */
-.welcome-promo {
-    font-family: "PT Sans", sans-serif;
-    background-image: url("../images/index-background.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+.wrapper-button {
+    width: 160px;
+    margin-left: auto;
+    margin-right: 72px;
     text-align: center;
 }
 
-.welcome-promo-logo {
-    padding-top: 51px;
-    padding-bottom: 82px;
-}
-
-.description-promo-more {
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.description-promo-reasons {
-    font-size: 22px;
-    line-height: 36px;
-    font-weight: 400;
-}
-
-/* Filter */
-.filter {
-    
-    color: #ffffff;
-    background-color: hsl(204 48% 67% / 0.5);
-    background-image: url("../images/catalog-background.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-}
-
-.inner-header-title {
-    
-    color: #ffffff;
-    font-size: 60px;
-    line-height: 78px;
-    font-weight: 700;
-    margin: 0;
+/* Sort */
+.catalog-page-container {
+    width: 1057px;
+    margin: 0 auto;
 }
 
 .total-hotels-found {
@@ -132,42 +181,106 @@ body {
     font-weight: 400;
 }
 
-/* List */
-.advantages-list, .description-promo {
-    text-align: center;
-}
-
 /* Description-promo */
 .description-promo {
     background: #ffffff;
-    padding: auto;
+    height: 282px;
+    text-align: center;
 }
 
-.description-promo-more, .description-promo-reasons {
-    margin: 0px;
+.description-promo-more {
+    display: block;
+    margin: 0;
+    padding-top: 63px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.description-promo-reasons {
+    display: block;
+    margin: 0;
+    padding-top: 31px;
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* List */
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
 }
 
 /* Item */
-.advantages-item:nth-child(1), .advantages-item:nth-child(2) {
-    color: #ffffff;    
+.advantages-item {
+    width: 400px;
+    height: 384px;
+}
+
+.advantages-item:nth-child(1) {
+    margin-right: 800px;
+    position: relative;
+    color: #ffffff;
+    background: #83B3D3;
+    order: 0;
+      
+}
+
+.advantages-item:nth-child(2) {
+    margin-left: 800px;
+    position: relative;
+    color: #ffffff;
+    background: #83B3D3;
+    order: 2;   
 }
 
 .advantages-item:nth-child(1)::after {
     content: url("../images/photo-1.jpg");
+    position: absolute;
+    top: 0px;
+    left: 400px;
+
 }
 
 .advantages-item:nth-child(2)::before {
     content: url("../images/photo-2.jpg");
+    position: absolute;
+    top: 0px;
+    right: 400px;
 }
 
+.advantages-item:nth-child(3), .advantages-item:nth-child(5) {
+    order: 3;  
+}
+
+.advantages-item:nth-child(3), .advantages-item:nth-child(5), .advantages-item-hous, .advantages-item-souvenir {
+    background: rgba(131, 179, 211, 0.12); 
+    
+}
+
+.advantages-item:nth-child(4) {
+    background: rgba(131, 179, 211, 0.2);  
+    order: 3;  
+}
 
 .advantages-item-hous, .advantages-item-food, .advantages-item-souvenir {
     color: #000000;
+    order: 1;
+}
+
+.advantages-item-food {
+    background: #ffffff;
 }
 
 /* Title */
 .advantages-title {
-    font-family: "PT Sans", sans-serif;
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;
@@ -175,13 +288,14 @@ body {
 
 /* Hotel search */
 .hotel-search {
-    font-family: "PT Sans", sans-serif;
     color: #000000;
     background: #ffffff;
+    height: 417px;
     text-align: center;
 }
 
 .hotel-search-interest {
+    padding-top: 91px;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
@@ -189,18 +303,17 @@ body {
 }
 
 .hotel-search-dates {
+    padding-top: 29px;
+    padding-bottom: 56px;
     font-size: 22px;
     line-height: 26px;
     font-weight: 400;
 }
 
-
 /* Subscription */
 .subscription {
-    font-family: "PT Sans", sans-serif;
     text-align: center;
     height: 411px;
-    padding-top: 50px;
 }
 
 .index-subscription {
@@ -215,6 +328,7 @@ body {
 }
 
 .subscription-title {
+    padding-top: 94px;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
@@ -222,9 +336,15 @@ body {
 }
 
 .newsletter-promo {
+    padding-top: 29px;
+    padding-bottom: 46px;
     font-size: 22px;
     line-height: 26px;
     font-weight: 400;
+}
+
+.hotel-search-interest, .hotel-search-dates, .subscription-title, .newsletter-promo, .newsletter-form {
+    margin: 0;
 }
 
 .hotel-card-link {
@@ -250,7 +370,6 @@ body {
 
 /* Button */
 .button {
-    font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
@@ -299,7 +418,7 @@ body {
     border-radius: 4px;
 }
 
-
+/* Footer */
 .page-footer {
     font-size: 20px;
     font-weight: 400;
@@ -307,18 +426,47 @@ body {
     background-color: #ffffff;
 }
 
-.footer-contacts-phone {
+.page-footer-container {
+    display: flex;
+
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-social {
+    width: 180px;
+    margin-right: 60px;
+}
+
+.footer-contacts {
+    width: 720px;
     font-size: 40px;
     line-height: 40px;
     font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+}
+
+.footer-contacts-phone {
     color: #000000;
     text-decoration: none;
+}
+
+.footer-logo {
+    width: 190px;
+    margin-left: auto;
 }
 
 .page-footer .htmlacademy-link {
     color: #000000;
 }
  
+.footer-social, .footer-contacts, .footer-logo {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
 .visually-hidden {
     position: absolute;
     visibility: hidden;
