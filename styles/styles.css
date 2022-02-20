@@ -35,6 +35,7 @@ body {
 .page-header {
     color: #000000;
     background: #ffffff;
+    
 }
 
 
@@ -46,9 +47,16 @@ body {
 }
 
 .navigation-list {
+    display: flex;
+    flex-wrap: wrap;
     width: 584px;
     margin: 0;
     padding: 0;
+    list-style: none;
+}
+
+.navigation-logo {
+    height: 70px;
 }
 
 .navigation-user {
@@ -56,15 +64,19 @@ body {
     margin-left: auto;
 }
 
-.navigation-item {
-    list-style: none;
-}
-
 .navigation-link {
+    display: block;
+    padding: 20px 17px;
     line-height: 26px;
     font-weight: 700;
     color: #000000;
     text-decoration: none;
+}
+
+.navigation-user .navigation-link {
+    min-width: 16px;
+    min-height: 22px;
+    
 }
 
 /* Main */
@@ -85,6 +97,7 @@ body {
 .page-container {
     width: 1200px;
     margin: 0 auto;
+    
 }
 
 .logo {
@@ -94,14 +107,33 @@ body {
 
 .welcome-promo-logo {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto;  
 }
 
 /* Breadcrumbs */
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.breadcrumbs-item {
+    padding-right: 26px;
+}
+
+.breadcrumbs-item:nth-last-child(1) {
+    padding-right: 0;
+}
+
 .breadcrumbs-link {
     font-size: 16px;
     line-height: 21px;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
     color: #ffffff;
     text-decoration: none;
 }
@@ -111,9 +143,6 @@ body {
     background-image: url("../images/index-background.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
-}
-
-.welcome-promo-logo {
     padding-top: 51px;
     padding-bottom: 82px;
 }
@@ -133,6 +162,7 @@ body {
     line-height: 78px;
     font-weight: 700;
     margin: 0;
+    padding-top: 35px;
 }
 
 /* Filter */
@@ -169,7 +199,18 @@ body {
     margin: 0 auto;
 }
 
-.total-hotels-found {
+.sorting-container {
+    display: flex;
+    padding-top: 44px;
+    padding-bottom: 53px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.total-hotels-found {  
+    margin: 0;
+    margin-right: 190px;
+    padding: 0;
     font-size: 30px;
     line-height: 39px;
     font-weight: 700;
@@ -179,6 +220,11 @@ body {
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
+}
+
+.sorting-container .button {
+    width: 48px;
+    height: 48px;
 }
 
 /* Description-promo */
@@ -222,6 +268,20 @@ body {
 .advantages-item {
     width: 400px;
     height: 384px;
+}
+
+.advantages-title {
+    margin-top: 98px;
+    margin-bottom: 30px;
+}
+
+.advantages-number {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.advantages-description {
+    margin: 0;
 }
 
 .advantages-item:nth-child(1) {
@@ -313,7 +373,7 @@ body {
 /* Subscription */
 .subscription {
     text-align: center;
-    height: 411px;
+    height: 380px;
 }
 
 .index-subscription {
@@ -328,7 +388,7 @@ body {
 }
 
 .subscription-title {
-    padding-top: 94px;
+    padding-top: 50px;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
@@ -345,6 +405,12 @@ body {
 
 .hotel-search-interest, .hotel-search-dates, .subscription-title, .newsletter-promo, .newsletter-form {
     margin: 0;
+}
+
+.hotel-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .hotel-card-link {
@@ -403,6 +469,43 @@ body {
     background-color: #F2F2F2;
 }
 
+.load-more-button {
+    margin: 20px 40px;
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.pagination {
+    display: flex;
+    
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pagination-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.pagination-link {
+    display: block;
+    box-sizing: border-box;
+    width: 55px;
+    height: 55px;
+    padding: 14px 20px;
+}
+
+.total-cards {
+    margin: 0;
+    margin-left: auto;
+    margin-right: 50px;
+    padding: 0;
+}
+
 /* Card rating */
 .hotel-card-rating {
     color: #333333;
@@ -428,14 +531,33 @@ body {
 
 .page-footer-container {
     display: flex;
-
     width: 1200px;
     margin: 0 auto;
+    padding: 40px 0;
 }
 
 .footer-social {
     width: 180px;
     margin-right: 60px;
+    margin-left: 72px;
+}
+
+.footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-social-item {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.footer-social-item:nth-child(3n) {
+    margin-right: 0px;
 }
 
 .footer-contacts {
@@ -460,14 +582,22 @@ body {
 .page-footer .htmlacademy-link {
     color: #000000;
 }
- 
+
 .footer-social, .footer-contacts, .footer-logo {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
 }
 
+.footer-logo-htmlacademy {
+    margin-bottom: 0;
+}
 
 .visually-hidden {
     position: absolute;
-    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
