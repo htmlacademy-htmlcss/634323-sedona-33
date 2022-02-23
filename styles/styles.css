@@ -202,7 +202,7 @@ body {
 .sorting-container {
     display: flex;
     padding-top: 44px;
-    padding-bottom: 53px;
+    padding-bottom: 33px;
     padding-left: 0;
     padding-right: 0;
 }
@@ -220,6 +220,7 @@ body {
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
+    margin-right: auto;
 }
 
 .sorting-container .button {
@@ -405,23 +406,66 @@ body {
 
 .hotel-search-interest, .hotel-search-dates, .subscription-title, .newsletter-promo, .newsletter-form {
     margin: 0;
+
 }
 
 .hotel-list {
+    display: grid;
+    grid-template-columns: 339px 339px 339px;
+    row-gap: 8px;
+    column-gap: 10px;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
+.hotel-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.hotel-card-title {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.hotel-card-type-and-price, .hotel-card-button {
+    margin-bottom: 16px;
+}
+
+.hotel-card-type-and-price, .hotel-card-button, .hotel-card-rating {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.hotel-type {
+    margin: 0;
+    padding: 0;
+}
+
+ .hotel-price, .hotel-card-button-favourites {
+    width: 140px;
+    margin: 0;
+    padding: 0;
+}
+
 .hotel-card-link {
     color: #000000;
+    margin: 0;
+    padding: 0;
     font-size: 24px;
     line-height: 31px;
     font-weight: 700;
     text-decoration: none;
+    text-align: center;
 }
 
-.hotel-type, .hotel-card-price {
+.hotel-type, .hotel-price {
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
@@ -451,12 +495,12 @@ body {
     line-height: 26px;
 }
 
-.hotel-card-button, .favourites-button, .apply-button {
+.hotel-card-button-more, .hotel-card-button-favourites, .apply-button {
     font-size: 16px;
     line-height: 21px;
 }
 
-.favourites-button, .apply-button, .reset-button, .social-button, .newsletter-button, .load-more-button, .pagination-link {
+.hotel-card-button-favourites, .apply-button, .reset-button, .social-button, .newsletter-button, .load-more-button, .pagination-link {
     background-color: #83B3D3;
 }
 
@@ -470,7 +514,8 @@ body {
 }
 
 .load-more-button {
-    margin: 20px 40px;
+    display: block;
+    margin: 20px auto;
 }
 
 .pagination-container {
@@ -481,7 +526,6 @@ body {
 
 .pagination {
     display: flex;
-    
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -507,7 +551,7 @@ body {
 }
 
 /* Card rating */
-.hotel-card-rating {
+.hotel-card-rating-value {
     color: #333333;
     font-size: 16px;
     line-height: 21px;
@@ -519,6 +563,10 @@ body {
     padding-top: 9px;
     padding-bottom: 10px;
     border-radius: 4px;
+}
+
+.rating {
+    display: flex;
 }
 
 /* Footer */
