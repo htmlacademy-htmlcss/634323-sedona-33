@@ -104,7 +104,7 @@ body {
     fill: #756257;
 }
 
-.navigation-link.button:hover {
+.navigation-link.button:hover, .button-catalog:hover  {
     color: #ffffff;
     background-color: #615048;
 }
@@ -122,12 +122,12 @@ body {
     opacity: 0.3;
 }
 
-.navigation-link.button:active {
+.navigation-link.button:active, .button-catalog:active {
     color: rgba(225, 225, 225, 0.5);
     background-color: #615048;
 }
 
-.navigation-link.button:focus {
+.navigation-link.button:focus, .button-catalog:focus {
     outline: 3px #83B3D3 solid;
 }
 
