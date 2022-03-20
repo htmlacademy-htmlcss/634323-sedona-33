@@ -176,9 +176,8 @@
           <p class="newsletter-promo">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
 
-            <label class="form-label" for="newsletter-email">Email</label>
-            <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-
+            <label class="form-label visually-hidden" for="newsletter-email">Email</label>
+            <input class="field subscription-field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="button newsletter-button" type="submit">
               <span>Подписаться</span>
             </button>
@@ -258,5 +257,93 @@
         </div>     
       </footer>
     </div>
+    
+    <!-- Модальное окно  modal-container-close-->
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search-hotel">
+
+        <button class="modal-close-button">
+          <svg class="modal-close-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z"/>
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-group">
+              <label class="form-label" for="check-in-date">Дата заезда:</label>
+              <input class="modal-form-field" type="text" id="check-in-date" name="check-in-date" placeholder="Укажите дату">              
+            </div>
+            <p class="check-in-date-status">Мы не можем отправить вас в прошлое.</p>
+            <div class="field-group">
+              <label class="form-label" for="check-out-date">Дата выезда:</label>
+              <input class="modal-form-field" type="text" id="check-out-date" name="check-out-date" placeholder="Укажите дату">              
+            </div>
+            <p class="check-out-date-status">На эти даты есть свободные номера. Пока есть.</p>
+
+            <div class="wrapper-form">
+
+              <div class="field-group field-group-total-people">
+                <label class="form-label" for="total-adults">Взрослые:</label>
+                <button class="button-action-sign button-action-minus" type="button">
+                  <svg class="action-sign-icon" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 1L13 1V0L0 0Z"/>
+                  </svg>
+                </button>
+                <input class="modal-form-field field-total-adults" type="text" id="total-adults" name="total-adults" placeholder="1">              
+                <button class="button-action-sign button-action-plus" type="button">
+                  <svg class="action-sign-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="field-group field-group-total-people">
+                <span class="form-label">
+                  <label class="form-label" for="total-children">Дети:</label>
+
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.5" cy="12.5" r="12.5"/>
+                        <g clip-path="url(#clip0_35406_202)">
+                        <path d="M12 17H13V11H12V17Z" fill="white"/>
+                        <path d="M13 8H12V9H13V8Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_35406_202">
+                        <rect width="1" height="9" fill="white" transform="translate(12 8)"/>
+                        </clipPath>
+                        </defs>
+                      </svg>                                              
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+
+                  </span>                  
+                </span>               
+
+                <button class="button-action-sign button-action-minus" type="button">
+                  <svg class="action-sign-icon" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 1L13 1V0L0 0Z"/>
+                  </svg>
+                </button>
+                <input class="modal-form-field field-total-children" type="text" id="total-children" name="total-adults" placeholder="1">              
+                <button class="button-action-sign button-action-plus" type="button">
+                  <svg class="action-sign-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <button class="button modal-search-hotel-button" type="submit">Найти</button>
+
+          </form>
+        </section>
+      </div>        
+    </div>
+    
   </body>
 </html>
