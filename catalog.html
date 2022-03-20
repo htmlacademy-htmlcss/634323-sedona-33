@@ -99,20 +99,23 @@
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="pool" checked>
-                        Бассейн
+                        <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                        <span class="control-mark"></span>
+                        <span class="control-label">Бассейн</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="parking" checked>
-                        Парковка
+                        <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                        <span class="control-mark"></span>
+                        <span class="control-label">Парковка</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="Wi-Fi">
-                        Wi-Fi
+                        <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi">
+                        <span class="control-mark"></span>
+                        <span class="control-label">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>   
@@ -123,32 +126,62 @@
                   <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
                         <label class="control">
-                          <input class="control-input" type="radio" name="type-of-housing" value="hotel" checked>
-                          Гостиница
+                          <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="hotel" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-label">Гостиница</span>
                         </label>
                       </li>
                       <li class="catalog-filter-item">
                         <label class="control">
-                          <input class="control-input" type="radio" name="type-of-housing" value="motel">
-                          Мотель
+                          <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="motel">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Мотель</span>
                         </label>
                       </li>
                       <li class="catalog-filter-item">
                         <label class="control">
-                          <input class="control-input" type="radio" name="type-of-housing" value="apartments">
-                          Апартаменты
+                          <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="apartments">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Апартаменты</span>
                         </label>
                       </li>
                     </ul>           
+                </fieldset>
+
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label" for="">
+                      <input class="range-input" type="number" value="0" name="min-price">
+                      <span class="range-from-to">от</span>
+                    </label>
+                    <label class="catalog-filter-label" for="">
+                      <input class="range-input" type="number" value="9000" name="max-price">
+                      <span class="range-from-to">до</span>
+                    </label>
+                  </div>
+
+                  <div class="range">
+                    <div class="range-scale">
+                      <div class="range-bar" style="width: 227px;">
+                        <button class="range-toggle toggle-min" type="button">
+                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="range-toggle toggle-max" type="button">
+                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
                 </fieldset>
                 
                 <div class="wrapper-button">
                   <button class="apply-button button" type="submit">Применить</button>
                   <button class="reset-button button" type="reset">Сбросить</button>
-                </div>
-                
+                </div>                
               </form>
-
               </section>
           </div>
 
@@ -162,11 +195,13 @@
 
                 <p class="total-hotels-found">НАЙДЕНО ГОСТИНИЦ: 38</p>
                 
-                <select class="select-control" aria-label="Сортировка">
-                  <option value="cheap">Сначала дешёвые</option>
-                  <option value="popular">Сначала популярные</option>
-                  <option value="expensive">Сначала дорогие</option>
-                </select>          
+                <div class="select sorting-type">
+                  <select class="select-control" aria-label="Сортировка">
+                    <option value="cheap">Сначала дешёвые</option>
+                    <option value="popular">Сначала популярные</option>
+                    <option value="expensive">Сначала дорогие</option>
+                  </select>
+                </div>                         
                 
                 <a href="#" class="sorting-button button-active">
                   <svg class="mode-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,7 +234,6 @@
                   </svg>
                   <span class="visually-hidden">Показать списоком</span>
                 </a>
-
               </div>
     
               <!-- Список гостиниц -->
@@ -380,12 +414,14 @@
                 
                 <!-- Гостиниц на страницу -->
                 <p class="total-cards">Гостиниц на странице:</p>
-                <select class="select-total-cards" aria-label="Количество карточек">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4" selected>4</option>
-                </select>
+                <div class="select select-total">
+                  <select class="select-total-cards" aria-label="Количество карточек">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                  </select>
+                </div>                
 
               </div>            
             </div>
@@ -398,8 +434,8 @@
             <p class="newsletter-promo">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
 
-              <label for="newsletter-email">Email</label>
-              <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+              <label class="form-label visually-hidden" for="newsletter-email">Email</label>
+              <input class="field subscription-field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
 
               <button class="button newsletter-button" type="submit">
                 <span>Подписаться</span>
@@ -480,6 +516,7 @@
         </div>
 
       </footer>
+
     </div> 
   </body>
 </html>
