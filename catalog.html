@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-
-    <link rel="stylesheet" href="styles/styles.css">
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles/styles.css">    
   </head>
   <body>
     <div class="page-container">
@@ -89,6 +88,7 @@
                     <span>Гостиницы</span>
                   </a>
                 </li>
+
               </ul>
               
               <!-- Фильтр -->
@@ -117,7 +117,7 @@
                         <span class="control-mark"></span>
                         <span class="control-label">Wi-Fi</span>
                       </label>
-                    </li>
+                    </li>                    
                   </ul>   
                 </fieldset>
     
@@ -152,12 +152,12 @@
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
 
                   <div class="range-wrapper-inputs">
-                    <label class="catalog-filter-label" for="">
-                      <input class="range-input" type="number" value="0" name="min-price">
+                    <label class="catalog-filter-label" for="min-price">
+                      <input class="range-input" type="number" value="0" name="min-price" id="min-price">
                       <span class="range-from-to">от</span>
                     </label>
-                    <label class="catalog-filter-label" for="">
-                      <input class="range-input" type="number" value="9000" name="max-price">
+                    <label class="catalog-filter-label" for="max-price">
+                      <input class="range-input" type="number" value="9000" name="max-price" id="max-price">
                       <span class="range-from-to">до</span>
                     </label>
                   </div>
@@ -251,7 +251,7 @@
                     </div>
                     <div class="hotel-card-button">
                       <a class="hotel-card-button-more button" href="#">Подробнее</a>
-                      <button class="hotel-card-button-favourites button">В ИЗБРАННОЕ</button>
+                      <button class="hotel-card-button-favourites button" type="button">В ИЗБРАННОЕ</button>
                     </div>
                     <div class="hotel-card-rating">
                       <ul class="rating">
@@ -293,7 +293,7 @@
                     </div>
                     <div class="hotel-card-button">
                       <a class="hotel-card-button-more button" href="#">Подробнее</a>
-                      <button class="hotel-card-button-favourites button">В ИЗБРАННОЕ</button>
+                      <button class="hotel-card-button-favourites button" type="button">В ИЗБРАННОЕ</button>
                     </div>
                     <div class="hotel-card-rating">
                       <ul class="rating">
@@ -330,7 +330,7 @@
                     </div>
                     <div class="hotel-card-button">
                       <a class="hotel-card-button-more button" href="#">Подробнее</a>
-                      <button class="hotel-card-button-favourites button added-button">В ИЗБРАННОМ</button>
+                      <button class="hotel-card-button-favourites button added-button" type="button">В ИЗБРАННОМ</button>
                     </div>
                     <div class="hotel-card-rating">                    
                       <ul class="rating">
@@ -362,7 +362,7 @@
                     </div>
                     <div class="hotel-card-button">
                       <a class="hotel-card-button-more button" href="#">Подробнее</a>
-                      <button class="hotel-card-button-favourites button">В ИЗБРАННОЕ</button>
+                      <button class="hotel-card-button-favourites button" type="button">В ИЗБРАННОЕ</button>
                     </div>
                     <div class="hotel-card-rating">
                       <ul class="rating">
@@ -385,7 +385,7 @@
               </ul>
 
               <div class="decorative-element-divider">
-                <button class="button load-more-button">ЗАГРУЗИТЬ ЕЩЁ</button>
+                <button class="button load-more-button" type="button">ЗАГРУЗИТЬ ЕЩЁ</button>
               </div>              
 
               <!-- Пагинация -->
